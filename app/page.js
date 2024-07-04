@@ -1,9 +1,29 @@
-import Navbar from "./components/navbar";
+"use client";
+import HomeScreen from "./components/HomeScreen";
+import Lenis from "lenis";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useEffect } from "react";
+import { gsap } from "gsap";
+
 export default function Home() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    lenis.on("scroll", (e) => {
+      console.log(e);
+    });
+
+    lenis.on("scroll", ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+  }, []);
   return (
-    <main>
-      {/* <Navbar /> */}
-      <h1>Welcome to Bodega</h1>
+    <main className="inter w-full h-screen">
+      <HomeScreen />
     </main>
   );
 }
