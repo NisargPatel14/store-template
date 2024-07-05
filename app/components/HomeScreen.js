@@ -11,7 +11,7 @@ function HomeScreen() {
       }}
     >
       <div className="lg:w-[40%] md:w-screen sm:w-screen flex flex-col gap-12 p-10">
-        <div className="text-[#3a3a3a] font-bold lg:text-5xl sm:text-4xl md:text-4xl text-3xl">
+        <div className="text-[#3a3a3a] font-bold lg:text-5xl sm:text-3xl md:text-3xl text-3xl">
           Buy Fresh Groceries and Organic food.
         </div>
         <div className="text-[#3a3a3a] text-xl font-medium">
