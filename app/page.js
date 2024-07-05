@@ -1,9 +1,11 @@
 "use client";
 import HomeScreen from "./components/HomeScreen";
+import Navbar from "./components/Navbar";
 import Lenis from "lenis";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";
 import { gsap } from "gsap";
+import AboutUs from "./components/AboutUs";
 
 export default function Home() {
   useEffect(() => {
@@ -23,7 +25,9 @@ export default function Home() {
   }, []);
   return (
     <main className="inter w-full h-screen">
+      <Navbar />
       <HomeScreen />
+      <AboutUs />
     </main>
   );
 }
